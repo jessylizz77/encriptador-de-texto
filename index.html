@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="script.js" defer></script>
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <header class="header">
+      <img
+            src="./assets/Logo.png"
+            alt="Logo de Alura"
+        />
+      <!-- <h1 class="encriptador__contenido__titulo">
+        Challenge encriptador de texto
+      </h1> -->
+    </header>
+    <main class="encriptador">
+      <section class="encriptador__contenido">
+     <!--  <input
+          type="text"
+          id="textoEncriptar"
+          class="encriptador__contenido__texto"
+          placeholder="Ingrese el texto aqui"
+          pattern="[a-z]" required
+          title="Solo letras minúsculas y sin acentos"
+        /> -->
+     
+        
+      <textarea placeholder="Ingrese el texto aqui" 
+         class="encriptador__contenido__texto"  
+         id="textoEncriptar"
+         autofocus
+      >            
+        </textarea> 
+       
+        <div class="encriptador__contenido__informacion">
+          <img
+            src="./assets/bi_exclamation-circle-fill.png"
+            alt="icono de Información"
+          />
+          <h5>
+          Solo letras minúsculas y sin acentos
+          </h5>
+        </div>
+        <div class="encriptador__contenido__botones">
+          <button
+            onclick="encriptarTexto();"
+            class="encriptador__contenido__botonEncriptar"
+          >
+            Encriptar
+          </button>
+          <button onclick="desencriptarTexto();" class="encriptador__contenido__boton">
+            Desencriptar
+          </button>
+        </div>
+      </section>
+      <section class="container__desencriptado">
+      <div id="containerImagen" class="container__desencriptado__imagen">
+        <img src="./assets/Muñeco.png" alt="" class="container__desencriptado__imagen__imagen">
+        <p class="container__desencriptado__mensaje">
+          <strong>Ningún mensaje fue encontrado</strong>
+        </p>
+        <p class="container__desencriptado__mensaje2"> 
+          Ingresa el texto que desees encriptar o desencriptar.</p>
+      </div>
+      <div id="containerTexto" class="container__desencriptado__texto">
+        <textarea id="textoDesencriptado" class="encriptador__contenido__texto" rows="15" disabled>
+        </textarea>  
+        <button onclick="copiarTexto();" class="encriptador__contenido__boton">
+          Copiar
+        </button>
+      </div>
+    </section>
+    </main>
+  </body>
+  <footer class="footer">
+    <p>Desarrollado por Jessica Lizeth León Ruiz</p>
+  </footer>
+</html>
