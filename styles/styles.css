@@ -18,6 +18,12 @@ body {
   padding: 2% 0% 0% 15%;
   display: flex;
   justify-content: left;
+
+}
+
+.encriptador__contenido__titulo{
+  font-family: var(--fuente-inter);
+  color: #0a3871;
 }
 
 .encriptador {
@@ -45,6 +51,7 @@ body {
   border: none;
   height: 100%;
   width: 100%;
+  text-align: left;
 }
 
 .encriptador__contenido__texto:focus {
@@ -54,6 +61,10 @@ body {
 ::placeholder {
   color: #0a3871;
   position: relative;
+}
+
+textarea:invalid:required {
+  border: solid 2px #0a3871;
 }
 
 .encriptador__contenido__informacion {
@@ -79,7 +90,7 @@ body {
   color: white;
   background-color: #0a3871;
   border-radius: 24px;
-  padding: 5% 20%;
+  padding: 5% 17%;
 }
 
 .encriptador__contenido__boton {
@@ -99,6 +110,7 @@ body {
   align-items: center;
   gap: 60px;
   border-radius: 15px;
+  width: auto;
 }
 
 .container__desencriptado__imagen {
@@ -156,6 +168,10 @@ body {
 
   .encriptador__contenido {
     width: auto;
+  }
+
+  .encriptador__contenido__botones {
+     flex-direction: column;
   }
 
   .container__desencriptado {

@@ -16,20 +16,26 @@ function mostrarDivTexto() {
 }
 
 function encriptarTexto() {
-    textoDesencriptado.value = "";
-    let textoEncriptado = encriptar(textoIngresado.value);
-    textoIngresado.value = "";
-    textoDesencriptado.value = textoEncriptado;
-    textoEncriptado = "";
-    mostrarDivTexto();
+   
+    if( validarTexto(textoIngresado.value)){
+        textoDesencriptado.value = "";
+        let textoEncriptado = encriptar(textoIngresado.value);
+        textoIngresado.value = "";
+        textoDesencriptado.value = textoEncriptado;
+        textoEncriptado = "";
+        mostrarDivTexto();
+    }
 }
 
 function desencriptarTexto() {
-    let textoDesencriptado1 = desencriptar(textoIngresado.value);
-    textoIngresado.value = "";
-    textoDesencriptado.value = textoDesencriptado1;
-    textoDesencriptado1 = "";
-    mostrarDivTexto();
+
+    if(validarTexto(textoIngresado.value)){
+        let textoDesencriptado1 = desencriptar(textoIngresado.value);
+        textoIngresado.value = "";
+        textoDesencriptado.value = textoDesencriptado1;
+        textoDesencriptado1 = "";
+        mostrarDivTexto();
+    }
 }
 
 function encriptar(textoIngresado) {
@@ -87,4 +93,11 @@ function copiarTexto() {
         .catch(function (err) {
             console.error("Error al copiar texto: ", err);
         });
+}
+
+function validarTexto(texto) { 
+    
+    let expresionRegular = /[a-z ]+$/;
+    console.log(expresionRegular.test(texto));
+    return expresionRegular.test(texto);     
 }
