@@ -88,6 +88,7 @@ function copiarTexto() {
     navigator.clipboard
         .writeText(texto)
         .then(function () {
+            alert("Texto copiado al portapapeles");
             console.log("Texto copiado al portapapeles");
         })
         .catch(function (err) {
