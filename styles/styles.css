@@ -63,9 +63,6 @@ body {
   position: relative;
 }
 
-textarea:invalid:required {
-  border: solid 2px #0a3871;
-}
 
 .encriptador__contenido__informacion {
   font-size: 12px;
