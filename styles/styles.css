@@ -111,6 +111,7 @@ textarea:invalid:required {
   gap: 60px;
   border-radius: 15px;
   width: auto;
+  box-shadow: 3px 3px 5px gray;
 }
 
 .container__desencriptado__imagen {
